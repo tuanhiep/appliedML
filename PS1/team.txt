@@ -1,0 +1,8 @@
+
+Student names:
+
+1. Mawi Sium (Aggie ID: 800663072)
+
+2. Tuan Hiep TRAN (Aggie ID: 800715526)
+
+Our GitHub repository: https://github.com/tuanhiep/appliedML
