@@ -1,3 +1,2 @@
 # appliedML
-This is an applied Machine Learning project in NMSU 
-Hiep Tuan and Mawi Sium
+This is an applied Machine Learning project by Tuan-Hiep TRAN and Mawi Sium
