@@ -36,7 +36,7 @@ if not path.exists(args.dataSet):
 else:
 
     data = pd.read_csv(args.dataSet, sep=',')
-    #data.columns = ['ID','age', 'bp', 'sg', 'al','su','rbc','pc','pcc', 'ba','bgr','bu','sc','sod','pod','hemo','pcv','wbcc',
+    # data.columns = ['ID','age', 'bp', 'sg', 'al','su','rbc','pc','pcc', 'ba','bgr','bu','sc','sod','pod','hemo','pcv','wbcc',
     #               'rbcc','htn','dm','cad','appet','pe','ane','class']
 
 
@@ -74,14 +74,17 @@ else:
 
     myExtraTreesClassifier(X,Y)
 
+    #Heatmap original relations
 
-    #Heatmap relations
-
-    myHeatmap(data2)
-
+    myHeatmap(data2,"original")
     # drop some not important attributes
 
-    data2 = data2[['pcv', 'htn','dm','al','pc','su','bgr', 'classification']]
+    data2 = data2[['pcv', 'htn','dm','al','pc','sc','bgr', 'classification']]
+
+    #Heatmap important relations
+
+    myHeatmap(data2,"important")
+
     np.savetxt('csv/data.csv', data2, delimiter=',', fmt='%s')
     Y1 = data2['classification']
     X1 = data2.drop(['classification'],axis=1)

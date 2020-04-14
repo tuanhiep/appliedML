@@ -5,9 +5,9 @@ def myFeature_RFE(X,Y):
 
     # feature extraction
     print('#----------------------------- Feature Extraction : RFE  -------------------------------------#')
-    
+
     model = LogisticRegression()
-    rfe = RFE(model, 8)
+    rfe = RFE(model, 10)
     fit = rfe.fit(X, Y)
     print("Num Features: %d" % fit.n_features_)
     print("Selected Features: %s" % fit.support_)

@@ -6,8 +6,8 @@ def myFeature_univariate(data2,X,Y):
 
     # feature extraction
     print('#----------------------------- Feature Extraction : Univariate  -------------------------------------#')
-    
-    test = SelectKBest(score_func=chi2, k=8)
+
+    test = SelectKBest(score_func=chi2, k=10)
     fit = test.fit(X, Y)
     # summarize scores
     numpy.set_printoptions(precision=3)
